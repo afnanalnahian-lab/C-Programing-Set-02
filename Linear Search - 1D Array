@@ -1,0 +1,29 @@
+//Linear Search.
+
+#include<stdio.h>
+int main()
+{
+    int arr[6]={100,12,45,2,89,34};
+    int search,flag=0;
+
+    printf("Enter Your Search Element\n");
+    scanf("%d",&search);
+
+    for(int i=0;i<6;i++)
+    {
+        if(arr[i]==search)
+            flag=1;
+        break;
+    }
+    printf("\n\n");
+    if(flag==1)
+    {
+         printf("%d is Found:\n",search);
+    }
+    else
+    {
+        printf("%d is not Found",search);
+    }
+
+    return 0;
+}
