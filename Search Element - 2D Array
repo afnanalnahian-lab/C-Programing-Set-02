@@ -1,0 +1,40 @@
+//Search Element - 2D Array
+
+#include<stdio.h>
+int main()
+{
+    int marks[3][3];
+    int search,flag=0;
+    
+    //Input Row and Coloum
+    for(int i=0;i<3;i++)
+        {
+        for(int j=0;j<3;j++)
+        {
+            printf("marks[%d][%d]=",i,j);
+            scanf("%d",&marks[i][j]);
+            }
+    }
+    
+    //Input Search Element
+    printf("Enter Search Element");
+    scanf("%d",&search);
+    
+    //Find Search Element
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            if(search==marks[i][j])
+                {flag=1;
+                break;}}}
+    printf("\n\n");
+    
+    //Result
+    if(flag==1){
+        printf("%d is Found\n",search);}
+    else{
+        printf("%d is Not Found\n",search);}
+
+    return 0;
+}
