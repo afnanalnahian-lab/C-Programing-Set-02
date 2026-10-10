@@ -1,0 +1,56 @@
+// Multipication of Two Matrix - 2D Array
+
+#include<stdio.h>
+int main()
+{
+    int marksA[3][3];
+    int marksB[3][3];
+    int result[3][3];
+    int i,j,k,r1,r2,c1,c2;
+
+    //Row and Colum Number Input
+    printf("Enter 1st Matrix Row and Coloum\n");
+            scanf("%d %d",&r1,&c1);
+    printf("Enter 2nd Matrix Row and Coloum\n");
+            scanf("%d %d",&r2,&c2);
+
+    //Condition
+    while(c1!=r2){
+        printf("Error, Again Enter Row and Row\n");
+        printf("\n\n");
+        //Row and Colum Number Input
+    printf("Enter 1st Matrix Row and Coloum\n");
+            scanf("%d %d",&r1,&c1);
+    printf("Enter 2nd Matrix Row and Coloum\n");
+            scanf("%d %d",&r2,&c2);
+    }
+
+    //MarksA
+    printf("Give Your marks For A\n");
+    for(int i=0;i<r1;i++){
+        for(int j=0;j<c1;j++){
+            printf("Marks[%d][%d] =",i,j);
+            scanf("%d",&marksA[i][j]);}}
+
+    printf("\n\n");
+    //MarksB
+    printf("Give Your marks For B\n");
+     for(int i=0;i<r2;i++){
+        for(int j=0;j<c2;j++){
+            printf("Marks[%d][%d] =",i,j);
+            scanf("%d",&marksB[i][j]);}}
+
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+                result[i][j]=0;
+        for(int k=0;k<r1;k++){
+                result[i][j]=result[i][j]+marksA[i][k]*marksB[k][j];}
+            }}
+
+    printf("\n\n");
+    for(int i=0;i<r1;i++){
+        for(int j=0;j<c2;j++){
+            printf("result[%d][%d] = %d\n",i,j,result[i][j]);}}
+
+    return 0;
+}
