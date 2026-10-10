@@ -1,0 +1,24 @@
+//Secondary Diagonal - 2D Array
+
+#include<stdio.h>
+int main()
+{
+    int marks[3][3];
+    int sum=0;
+    //Input
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            printf("marks[%d][%d]=",i,j);
+            scanf("%d",&marks[i][j]);
+        }
+    }
+    //Primary Diagonal (i+j=n-1)
+    for(int i=0;i<3;i++){
+            sum= sum + marks[i][2-i];//(i+j=n-1 -> j=n-1-i -> j=3-1-i)
+        }
+    printf("\n\n");
+    //Result
+
+    printf("Primary Diadonal is %d\n",sum);
+    return 0;
+}
