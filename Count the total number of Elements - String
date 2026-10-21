@@ -1,0 +1,38 @@
+//Count the total number of Small/Capital letters, Digit and Special Character.
+
+#include<stdio.h>
+int main()
+{
+    char input[20];
+    char small=0, big=0;
+    int digit=0, special=0;
+    char i=0;
+
+    printf("Getting Input Text : ");
+    fgets(input, sizeof(input), stdin);
+
+    while(input[i] != '\0'){
+        if(input[i]>='a' && input[i]<='z'){
+            small++;
+            printf("Small : %c (%d)\n",input[i],small);
+        } else if(input[i]>='A' && input[i]<='Z'){
+            big++;
+            printf("Capital : %c (%d)\n",input[i],big);
+        } else if(input[i]>='0' && input[i]<='9'){
+            digit++;
+            printf("Digit : %c (%d)\n",input[i],digit);
+        } else {
+            special++;
+            printf("Special : %c (%d)\n",input[i],special);
+        } i++;
+    }
+
+    printf("\n\n");
+    printf("Small letters %d\n", small);
+    printf("Capital letters %d\n", big);
+    printf("Digit Numbers %d\n", digit);
+    printf("Special Character %d\n", special);
+
+    return 0;
+
+}
