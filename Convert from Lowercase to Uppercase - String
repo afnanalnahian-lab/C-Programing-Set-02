@@ -1,0 +1,65 @@
+//Convert a String from Lowercase to Uppercase and vice versa.
+
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+
+int main()
+{
+/*  with Function
+    char str[]="Morning Press Bangladesh";
+
+    strlwr(str); //Lower Case
+
+    printf("\n");
+    printf("Upercase to Lower case with strlwr() :  %s\n", str);
+
+    strupr(str); //Uppar Case
+
+    printf("\n");
+    printf("Lower case to Uppar case with strlwr() :  %s\n", str);
+
+    return 0;
+*/
+    //Without function.
+    char str[]="Morning Press Bangladesh";
+    int i = 0;
+
+/*  //Upparcase
+    while(str[i]!='\0'){
+        if(str[i]>='a' && str[i]<='z'){
+            str[i]=str[i]-32;
+        } i++;
+    }
+    printf("\n");
+    printf("Lower case to Uppar case without function :  %s\n", str);
+
+    //Lowercase
+    while(str[i]!='\0'){
+        if(str[i]>='a' && str[i]<='z'){
+            str[i]=str[i]+32;
+        } i++;
+    }
+    printf("\n");
+    printf("Lower case to Uppar case without function :  %s\n", str);
+*/
+
+    //Upparcase with toupper
+    while(str[i]!='\0'){
+        if(str[i]>='a' && str[i]<='z'){
+            str[i]=toupper(str[i]);
+        } i++;
+    }
+    printf("\n");
+    printf("Lower case to Uppar case with toupper() :  %s\n", str);
+
+    //Lowercase with tolower
+    i=0;
+    while(str[i]!='\0'){
+        if(str[i]>='A' && str[i]<='Z'){
+            str[i]=tolower(str[i]);
+        } i++;
+    }
+    printf("\n");
+    printf("Uppar case to Lower case with tolower() :  %s\n", str);
+}
