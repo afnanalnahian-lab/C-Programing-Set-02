@@ -1,0 +1,21 @@
+//Formatted Input with sscanf() 
+#include<stdio.h>
+int main()
+{
+    char date[20];
+    int day;
+    char mounth[20];
+    int year;
+
+    printf("Date: Day|Mounth|Year\n");
+    fgets(date, sizeof(date),stdin);
+
+    sscanf(date, "%d %s %d", &day, mounth, &year);
+
+    printf("\n\n");
+    printf("Day = %d\n", day);
+    printf("Mounth = %s\n", mounth);
+    printf("Year = %d\n", year);
+
+    return 0;
+}
