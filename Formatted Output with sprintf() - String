@@ -1,0 +1,18 @@
+//Formatted Output with sprintf()
+
+#include<stdio.h>
+int main()
+{
+    char company[]="Morning Press Bangladesh";
+    int employ_number = 5;
+    float average_age = 27.5;
+
+    char report[100];
+
+    sprintf(report, "Company Name : %s, Total Employ : %d, Average Age : %.2f", company, employ_number, average_age);
+
+    printf("\n\n");
+    printf("Report Generated %s\n", report);
+
+    return 0;
+}
