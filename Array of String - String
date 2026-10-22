@@ -1,0 +1,37 @@
+//Array of String
+
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+/*  //Array of 5 Strings
+    //Each string can have up to 9 characters
+    //Plus 1 for null character
+    char colour[5][10]={
+        "Red",
+        "Green",
+        "Yellow"
+    };
+    strcpy(colour[3],"Blue");
+    strcpy(colour[4],"Sky Blue");
+
+    for(int i=0; i<5; i++){
+        printf("Colour %d: %s\n", i,colour[i]);
+    }
+    return 0;
+*/
+    //Input from Users
+    char colour[5][10];
+
+    for(int i=0; i<5; i++){
+        printf("Colour %d: ", i);
+        fgets(colour[i],sizeof(colour[i]),stdin);
+    }
+
+    printf("\nName of the Colours............\n");
+    for(int i=0; i<5; i++){
+        printf("Colour %d: %s\n", i,colour[i]);
+    }
+    return 0;
+}
