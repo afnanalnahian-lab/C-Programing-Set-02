@@ -1,0 +1,35 @@
+//Reverse a String with and without strrev().
+
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+
+/*  char str[]="Morning Press Bangladesh";
+
+    printf("%s\n", str);
+
+    strrev(str);
+
+    printf("Reverse with strrev() :  %s\n", str);
+
+    return 0;
+*/
+    char str[]="Morning Press Bangladesh";
+    char revstr[50];
+    int len, si, ri=0;
+
+    printf("%s\n", str);
+
+    len = strlen(str);
+
+    for(si=len-1; si>=0; si--){
+        revstr[ri++] = str[si] ;
+    }
+    revstr[ri] = '\0';
+
+    printf("Reverse without strrev() :  %s\n", revstr);
+
+    return 0;
+}
