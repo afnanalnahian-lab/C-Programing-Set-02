@@ -1,0 +1,27 @@
+//Reverse a String with Swapeing.
+
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+
+    char str[]="Morning Press Bangladesh";
+    int start = 0;
+    int end = strlen(str) - 1;
+    int temp;
+
+    printf("%s\n", str);
+
+    while(start<end){ //Swapeing
+        temp = str[start];
+        str[start]=str[end];
+        str[end]=temp;
+        start++;
+        end--;
+    }
+
+    printf("\n%s", str);
+
+    return 0;
+}
