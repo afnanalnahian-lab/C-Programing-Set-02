@@ -1,0 +1,35 @@
+//Function
+
+#include<stdio.h>
+#include<conio.h>
+
+float add (float num1, float num2){
+       return num1+num2;
+}
+int main()
+{
+    float sum=0;
+    sum=add(5.2,6.5);
+
+    printf("Sum is %.2f\n\n",sum);
+    printf("Sum 2nd Elements is %.2f\n",add(5,5));
+
+    return 0;
+}
+
+#include<stdio.h>
+#include<conio.h>
+
+float add (float num1, float num2){
+       return num1+num2;
+}
+int main()
+{
+    float sum=0;
+    sum=add(5.2,6.5);
+
+    printf("Sum is %.2f\n\n",sum);
+    printf("Sum 2nd Elements is %.2f\n",add(5,5));
+
+    return 0;
+}
